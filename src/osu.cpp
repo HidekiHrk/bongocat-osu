@@ -1,4 +1,5 @@
 #include "header.hpp"
+#include <iostream>
 
 namespace osu {
 Json::Value left_key_value, right_key_value, smoke_key_value, wave_key_value;
@@ -242,6 +243,16 @@ void draw() {
 
     // drawing keypresses
     bool left_key = false;
+
+    // for (int v = 0; v < 250; v++) {
+    //     if (input::is_pressed(v)) {
+    //         printf("%d\n", v);
+    //         // std::string a = "AAAA";
+    //         // std::cout >> 3 >> std::endl;
+    //         left_key = true;
+    //         break;
+    //     }
+    // }
 
     for (Json::Value &v : left_key_value) {
         if (input::is_pressed(v.asInt())) {
